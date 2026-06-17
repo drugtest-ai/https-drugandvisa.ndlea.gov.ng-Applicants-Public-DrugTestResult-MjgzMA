@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f5f5f5;
+            text-align:center;
+        }
+
+        /* First screen */
+        #certificateView{
+            padding:20px;
+        }
+
+        #certificateView img{
+            max-width:90%;
+            height:auto;
+            border:1px solid #ccc;
+        }
+
+        /* Second screen */
+        #printView{
+            display:none;
+            background:#dcdcdc;
+            min-height:100vh;
+        }
+
+        .topbar{
+            background:#00a8c6;
+            color:white;
+            padding:25px;
+            font-size:20px;
+            text-align:left;
+        }
+
+        .paper{
+            width:80%;
+            margin:50px auto;
+            background:white;
+            padding:20px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .paper img{
+            width:100%;
+            height:auto;
+        }
+
+        .footer{
+            background:#aaa;
+            color:white;
+            padding:15px;
+            font-size:24px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- First page -->
+<div id="certificateView">
+    <img src="certificate.jpg" alt="Certificate">
+</div>
+
+<!-- Second page -->
+<div id="printView">
+
+    <div class="topbar">
+        Select a printer<br><br>
+        Copies: 01 &nbsp;&nbsp;&nbsp; Paper size: Letter
+    </div>
+
+    <div class="paper">
+        <img src="certificate.jpg" alt="Certificate">
+    </div>
+
+    <div class="footer">
+        1/1 ✓
+    </div>
+
+</div>
+
+<script>
+    setTimeout(function() {
+        document.getElementById("certificateView").style.display = "none";
+        document.getElementById("printView").style.display = "block";
+    }, 5000); // 5 seconds
+</script>
+
+</body>
+</html>
